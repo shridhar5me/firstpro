@@ -219,7 +219,38 @@ PS C:\Users\Admin\Desktop\new> git log --oneline
 df8528a first
 
 
+PS C:\Users\Admin\Desktop\new> git switch branch3
+Switched to branch 'branch3'
+PS C:\Users\Admin\Desktop\new> git rebase master
+Successfully rebased and updated refs/heads/branch3.
+*No extra commit*
+
+
+PS C:\Users\Admin\Desktop\new> git reflog
+0b72c1c (HEAD -> branch3) HEAD@{0}: rebase (finish): returning to refs/heads/branch3
+0b72c1c (HEAD -> branch3) HEAD@{1}: rebase (pick): branch3commit
+3826b9b (master) HEAD@{2}: rebase (start): checkout master
+76c9086 HEAD@{3}: checkout: moving from master to branch3
+3826b9b (master) HEAD@{4}: commit: mastercommit
+695cd7c HEAD@{5}: commit: branch3commit
+a2044a5 HEAD@{6}: checkout: moving from branch3 to master
+76c9086 HEAD@{7}: commit: branch3commit
+983c308 HEAD@{8}: checkout: moving from master to branch3
+a2044a5 HEAD@{9}: commit: mastercommit
+328506b HEAD@{10}: merge branch3: Merge made by the 'ort' strategy.
 
 
 
-
+PS C:\Users\Admin\Desktop\new> git remote add origin https://github.com/shridhar5me/firstpro.git
+PS C:\Users\Admin\Desktop\new> git branch -M main
+PS C:\Users\Admin\Desktop\new> git push -u origin main
+Enumerating objects: 64, done.
+Counting objects: 100% (64/64), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (51/51), done.
+Writing objects: 100% (64/64), 6.99 KiB | 596.00 KiB/s, done.
+Total 64 (delta 20), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (20/20), done.
+To https://github.com/shridhar5me/firstpro.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
