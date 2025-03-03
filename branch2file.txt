@@ -1,3 +1,4 @@
 branch2 file.
 first
 second
+third
