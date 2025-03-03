@@ -151,11 +151,46 @@ index f5fd4e2..daac1d7 100644
 +first
 
 
-PS C:\Users\Admin\Desktop\new> git branch
-  branch1
-  branch2
-* master
-PS C:\Users\Admin\Desktop\new> git checkout branch2
+PS C:\Users\Admin\Desktop\new> git checkout master      
 error: Your local changes to the following files would be overwritten by checkout:
-        commands.txt
+        branch2file.txt
 Please commit your changes or stash them before you switch branches.
+Aborting
+PS C:\Users\Admin\Desktop\new> git stash
+Saved working directory and index state WIP on branch2: 15b94b8 conflict
+
+
+PS C:\Users\Admin\Desktop\new> git stash list
+stash@{0}: WIP on branch2: 15b94b8 conflict
+
+
+PS C:\Users\Admin\Desktop\new> git stash clear
+PS C:\Users\Admin\Desktop\new> git stash list 
+PS C:\Users\Admin\Desktop\new>
+
+
+PS C:\Users\Admin\Desktop\new> git tag 5me   
+PS C:\Users\Admin\Desktop\new> git tag      
+5me
+
+PS C:\Users\Admin\Desktop\new> git log --oneline        
+15b94b8 (branch2) conflict
+53d6057 conflict
+52a155c Merge branch 'branch2' 1
+0ee7acf first
+df8528a first
+9ee0e13 first
+dea90b4 first
+4e45ab0 first
+04ca781 first
+PS C:\Users\Admin\Desktop\new> git tag committag df8528a
+PS C:\Users\Admin\Desktop\new> git tag
+5me
+committag
+
+PS C:\Users\Admin\Desktop\new> git tag -d committag
+Deleted tag 'committag' (was df8528a)
+
+
+
+
