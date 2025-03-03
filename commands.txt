@@ -1,0 +1,23 @@
+PS C:\Users\Admin\Desktop\new> git init
+On branch master
+No commits yet
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        abc.txt
+
+PS C:\Users\Admin\Desktop\new> git add abc.txt
+PS C:\Users\Admin\Desktop\new> git commit -m "abc"
+[master (root-commit) 3067099] abc
+ 1 file changed, 1 insertion(+)
+ create mode 100644 abc.txt
+
+
+PS C:\Users\Admin\Desktop\new> git status
+On branch master
+nothing to commit, working tree clean
+
+
+PS C:\Users\Admin\Desktop\new> git log --oneline
+3067099 (HEAD -> master) abc
+
+
