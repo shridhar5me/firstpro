@@ -205,4 +205,16 @@ PS C:\Users\Admin\Desktop\new> git branch
   master
 PS C:\Users\Admin\Desktop\new> git switch master
 Switched to branch 'master'
+PS C:\Users\Admin\Desktop\new> git log --oneline
+328506b (HEAD -> master) Merge branch 'branch3'--extra commit
+97579c5 mastercommit
+983c308 (branch3) branch3commit
+72c157c conflict
+0b50512 (tag: 5me) conflict
+4ec3a37 Merge branch 'branch2'
+15b94b8 (branch2) conflict
+53d6057 conflict
+52a155c Merge branch 'branch2' 1
+0ee7acf first
+df8528a first
 
