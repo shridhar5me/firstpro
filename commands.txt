@@ -83,3 +83,79 @@ Fast-forward
  branch2file.txt | 1 +
  1 file changed, 1 insertion(+)
  create mode 100644 branch2file.txt
+
+
+Switched to branch 'master'
+PS C:\Users\Admin\Desktop\new> git merge branch2       
+Auto-merging branch2file.txt
+CONFLICT (content): Merge conflict in branch2file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\Admin\Desktop\new> git merge branch2
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+
+PS C:\Users\Admin\Desktop\new> git diff 
+diff --git a/commands.txt b/commands.txt
+index 1c8f0c8..d50aaab 100644
+--- a/commands.txt
++++ b/commands.txt
+@@ -82,4 +82,16 @@ Updating e827a33..eaba43d
+ Fast-forward
+  branch2file.txt | 1 +
+  1 file changed, 1 insertion(+)
+- create mode 100644 branch2file.txt
+\ No newline at end of file
++ create mode 100644 branch2file.txt
+
+
+PS C:\Users\Admin\Desktop\new> git diff branch1 branch2
+diff --git a/branch2file.txt b/branch2file.txt
+new file mode 100644
+index 0000000..3dc47d2
+--- /dev/null
++++ b/branch2file.txt
+@@ -0,0 +1,5 @@
++branch2 file.
++first
++second
++third
++four
+
+
+
+PS C:\Users\Admin\Desktop\new> git log --oneline
+15b94b8 (branch2) conflict
+53d6057 conflict
+52a155c Merge branch 'branch2' 1
+0ee7acf first
+df8528a first
+9ee0e13 first
+dea90b4 first
+4e45ab0 first
+04ca781 first
+e47f09a first
+PS C:\Users\Admin\Desktop\new> git diff 0ee7acf..9ee0e13
+diff --git a/branch2file.txt b/branch2file.txt
+index f5fd4e2..daac1d7 100644
+--- a/branch2file.txt
++++ b/branch2file.txt
+@@ -1,4 +1,2 @@
+ branch2 file.
+-first
+-second
+-third
+\ No newline at end of file
++first
+
+
+PS C:\Users\Admin\Desktop\new> git branch
+  branch1
+  branch2
+* master
+PS C:\Users\Admin\Desktop\new> git checkout branch2
+error: Your local changes to the following files would be overwritten by checkout:
+        commands.txt
+Please commit your changes or stash them before you switch branches.
