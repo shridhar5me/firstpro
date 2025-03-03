@@ -192,5 +192,17 @@ PS C:\Users\Admin\Desktop\new> git tag -d committag
 Deleted tag 'committag' (was df8528a)
 
 
-
+PS C:\Users\Admin\Desktop\new> git switch -c branch3
+PS C:\Users\Admin\Desktop\new> git add branch3file.txt 
+PS C:\Users\Admin\Desktop\new> git commit -m "branch3commit"
+[branch3 983c308] branch3commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branch3file.txt
+PS C:\Users\Admin\Desktop\new> git branch
+  branch1
+  branch2
+* branch3
+  master
+PS C:\Users\Admin\Desktop\new> git switch master
+Switched to branch 'master'
 
